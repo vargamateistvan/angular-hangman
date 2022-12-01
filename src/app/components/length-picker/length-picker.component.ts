@@ -24,11 +24,6 @@ export class LengthPickerComponent implements OnInit {
   public setRandomSelectedWordLength(): void {
     const randomLength =
       this.wordLengths[Math.floor(Math.random() * this.wordLengths.length)];
-    console.log('random', randomLength);
     this.setSelectedWordLength(randomLength);
-  }
-
-  public selectWord(): void {
-    this.gameService.selectWordByLength();
   }
 }

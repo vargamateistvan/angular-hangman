@@ -20,4 +20,11 @@ export class GameService {
   setWordLength(wordLength: number): void {
     this.selectedWordLength = wordLength;
   }
+
+  selectWordByLength(): string {
+    const lengthLongWords = this.words.filter(
+      (word: string) => word.length === this.selectedWordLength
+    );
+    return lengthLongWords[Math.floor(Math.random() * lengthLongWords.length)];
+  }
 }

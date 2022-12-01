@@ -8,16 +8,16 @@
 
   <path d="M5,1 v2" />
 
-  <circle cx="5" cy="4" r="1" />
+  <circle *ngIf="showHangman || missedLetters > 0" cx="5" cy="4" r="1" />
 
-  <path d="M5,5 v3" />
+  <path *ngIf="showHangman || missedLetters > 1" d="M5,5 v3" />
 
-  <path d="M5,5 l-2,2" />
+  <path *ngIf="showHangman || missedLetters > 2" d="M5,5 l-2,2" />
 
-  <path d="M5,5 l2,2" />
+  <path *ngIf="showHangman || missedLetters > 3" d="M5,5 l2,2" />
 
-  <path d="M5,8 l-2,2" />
+  <path *ngIf="showHangman || missedLetters > 4" d="M5,8 l-2,2" />
 
-  <path d="M5,8 l2,2" />
+  <path *ngIf="showHangman || missedLetters > 5" d="M5,8 l2,2" />
 
 </svg>

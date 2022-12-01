@@ -1,0 +1,95 @@
+.hangman-game {
+  display: flex;
+  flex-direction: row;
+  padding: 25px;
+
+  .hangman {
+    flex: 1;
+  }
+
+  .game {
+    flex: 2;
+     width: 80%;
+
+    .game-result {
+      .game-won {
+        color: green;
+      }
+
+      .game-lost {
+        color: red;
+      }
+    }
+
+    .game-guesser {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      margin-top: 25px;
+      gap: 5px;
+
+      .game-guesser-letter {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 28px;
+        height: 28px;
+        padding: 5px;
+        border: 2px solid black;
+        color: black;
+        font-weight: 700;
+      }
+    }
+
+    .game-letters {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      margin-top: 25px;
+      gap: 5px;
+
+      .game-letter {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 28px;
+        height: 28px;
+        padding: 5px;
+        border: 2px solid lightgray;
+        box-shadow: 2px 2px 2px gray;
+        color: black;
+        font-weight: 700;
+        cursor: pointer;
+
+        &.selected {
+          color: lightgray;
+        }
+      }
+    }
+
+    .game-buttons {
+      margin-top: 25px;
+      display: flex;
+      justify-content: space-between;
+
+      a {
+        text-decoration: none;
+        border: 2px solid lightgray;
+        box-shadow: 2px 2px 2px gray;
+        font-size: 16px;
+        padding: 5px 20px;
+
+      }
+
+      .end-game {
+        background-color: white;
+        color: black;
+      }
+
+      .new-game {
+        background-color: black;
+        color: white;
+      }
+    }
+  }
+}

@@ -19,7 +19,7 @@
     flex-direction: row;
     flex-wrap: wrap;
     gap: 5px;
-    width: 135px;
+    width: 140px;
     margin-bottom: 25px;
 
     .number {
@@ -27,8 +27,9 @@
       justify-content: center;
       align-items: center;
       width: 28px;
+      height: 28px;
       padding: 5px;
-      border: 1px solid gray;
+      border: 2px solid gray;
       box-shadow: 2px 2px 2px gray;
       cursor: pointer;
 
