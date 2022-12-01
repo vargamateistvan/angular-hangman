@@ -1,0 +1,47 @@
+.length-picker {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: 0 200px;
+
+  a {
+    text-decoration: none;
+    background-color: black;
+    color: white;
+    font-size: 16px;
+    padding: 5px 20px;
+  }
+
+  .numbers {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 5px;
+    width: 135px;
+    margin-bottom: 25px;
+
+    .number {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 28px;
+      padding: 5px;
+      border: 1px solid gray;
+      box-shadow: 2px 2px 2px gray;
+      cursor: pointer;
+
+      &.selected {
+        background-color: black;
+        color: white;
+      }
+    }
+    .random {
+      margin-top: 12px;
+      padding: 5px;
+      width: 100%;
+      border: 1px solid gray;
+    }
+  }
+}
