@@ -2,6 +2,7 @@
   <div class="hangman">
     <app-hangman-svg [missedLetters]="missedLetters"></app-hangman-svg>
   </div>
+
   <div class="game">
     <h1>The Hangman</h1>
 
@@ -14,7 +15,8 @@
       <div class="game-guesser-letter" *ngFor="let letter of wordGuesses">{{ letter.toUpperCase() }}</div>
     </div>
 
-    <p>Play with a word</p>
+    <div class="game-description">Play with a word</div>
+
     <div class="game-letters">
       <div class="game-letter" [ngClass]="{'selected': guessedLetters.includes(letter)}" *ngFor="let letter of letters"
         (click)="guessLetter(letter)">
@@ -22,8 +24,10 @@
     </div>
 
     <div class="game-buttons">
-      <a class="end-game" [routerLink]="['../', '']">END GAME</a>
-      <a class="new-game" [routerLink]="['../', 'length-picker']">START NEW GAME</a>
+      <a class="game-button end-game" [routerLink]="['../', '']">END GAME</a>
+      <a class="game-button new-game" [routerLink]="['../', 'length-picker']">START NEW GAME</a>
     </div>
   </div>
+
+  <a class="instructions-button" [routerLink]="['../', '']">INSTRUCTIONS &#8594;</a>
 </div>

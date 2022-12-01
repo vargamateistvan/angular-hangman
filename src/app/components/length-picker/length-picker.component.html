@@ -1,8 +1,8 @@
 <div class="length-picker">
   <h1>The Hangman</h1>
 
-  <p>Let's play <b>Hangman!</b></p>
-  <p>How many letters do you want in your word?</p>
+  <span>Let's play <b>Hangman!</b></span>
+  <span>How many letters do you want in your word?</span>
 
   <div class="numbers">
     <div class="number" [ngClass]="{'selected': wordLength === selectedWordLength}"
@@ -10,5 +10,5 @@
     <div class="number random" (click)="setRandomSelectedWordLength()">Random</div>
   </div>
 
-  <a [routerLink]="['../', 'hangman']">LET'S PLAY!</a>
+  <a class="play-button" [routerLink]="['../', 'hangman']">LET'S PLAY!</a>
 </div>

@@ -41,11 +41,16 @@
       }
     }
 
+    .game-description {
+      margin-top: 50px;
+      font-size: 12px;
+    }
+
     .game-letters {
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
-      margin-top: 25px;
+      margin-top: 10px;
       gap: 5px;
 
       .game-letter {
@@ -54,11 +59,11 @@
         align-items: center;
         width: 28px;
         height: 28px;
-        padding: 5px;
+        padding: 3px;
         border: 2px solid lightgray;
-        box-shadow: 2px 2px 2px gray;
-        color: black;
         font-weight: 700;
+        font-size: 18px;
+        color: black;
         cursor: pointer;
 
         &.selected {
@@ -72,16 +77,16 @@
       display: flex;
       justify-content: space-between;
 
-      a {
+      .game-button {
+        margin-top: 50px;
         text-decoration: none;
-        border: 2px solid lightgray;
-        box-shadow: 2px 2px 2px gray;
-        font-size: 16px;
-        padding: 5px 20px;
-
+        font-size: 14px;
+        padding: 8px 20px;
+        border-radius: 3px;
       }
 
       .end-game {
+        border: 2px solid lightgray;
         background-color: white;
         color: black;
       }
@@ -91,5 +96,12 @@
         color: white;
       }
     }
+  }
+
+  .instructions-button {
+    text-decoration: none;
+    font-size: 14px;
+    color: black;
+    font-weight: 700;
   }
 }
