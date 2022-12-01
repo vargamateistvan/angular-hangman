@@ -1,0 +1,32 @@
+.instructions {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: 0 200px;
+
+  .svg-container {
+    width: 100px;
+  }
+
+  .h1 {
+    font-size: 48px;
+  }
+
+  .h2 {
+    font-size: 32px;
+  }
+
+  p {
+    font-size: 14px;
+  }
+
+  a {
+    text-decoration: none;
+    background-color: black;
+    color: white;
+    font-size: 16px;
+    padding: 5px 20px;
+  }
+}
