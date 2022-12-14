@@ -5,10 +5,10 @@
   <span>How many letters do you want in your word?</span>
 
   <div class="numbers">
-    <div class="number" [ngClass]="{'selected': wordLength === selectedWordLength}"
-      *ngFor="let wordLength of wordLengths" (click)="setSelectedWordLength(wordLength)">{{ wordLength }}</div>
-    <div class="number random" (click)="setRandomSelectedWordLength()">Random</div>
+    <button class="number" [ngClass]="{'selected': wordLength === selectedWordLength}"
+      *ngFor="let wordLength of wordLengths" (click)="setSelectedWordLength(wordLength)">{{ wordLength }}</button>
+    <button class="number random" (click)="setRandomSelectedWordLength()">Random</button>
   </div>
 
-  <a class="play-button" [routerLink]="['../', 'hangman']">LET'S PLAY!</a>
+  <button [disabled]="!selectedWordLength" class="play-button" [routerLink]="['../', 'hangman']">LET'S PLAY!</button>
 </div>

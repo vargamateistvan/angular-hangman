@@ -14,5 +14,8 @@
       consequat.</span>
   </div>
 
-  <a class="got-it-button" [routerLink]="['../', 'length-picker']">GOT IT!</a>
+  <div class="buttons">
+    <a *ngIf="isLastRouteHangman" class="game-button back" [routerLink]="['../', 'hangman']">Back</a>
+    <a class="game-button got-it" [routerLink]="['../', 'length-picker']">GOT IT!</a>
+  </div>
 </div>

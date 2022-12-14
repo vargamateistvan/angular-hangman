@@ -30,13 +30,30 @@
     gap: 5px;
   }
 
-  .got-it-button {
-    margin-top: 50px;
-    text-decoration: none;
-    background-color: black;
-    color: white;
-    font-size: 14px;
-    padding: 8px 30px;
-    border-radius: 3px;
+  .buttons {
+    margin-top: 25px;
+    display: flex;
+    justify-content: space-between;
+
+    .game-button {
+      margin-top: 50px;
+      text-decoration: none;
+      font-size: 14px;
+      padding: 8px 20px;
+      border-radius: 3px;
+    }
+
+    .got-it {
+      background-color: black;
+      color: white;
+    }
+
+    .back {
+      border: 2px solid lightgray;
+      background-color: white;
+      color: black;
+      margin-right: 25px;
+    }
   }
+
 }

@@ -18,9 +18,9 @@
     <div class="game-description">Play with a word</div>
 
     <div class="game-letters">
-      <div class="game-letter" [ngClass]="{'selected': guessedLetters.includes(letter)}" *ngFor="let letter of letters"
-        (click)="guessLetter(letter)">
-        {{ letter.toUpperCase() }}</div>
+      <button class="game-letter" [ngClass]="{'selected': guessedLetters.includes(letter)}"
+        *ngFor="let letter of letters" (click)="guessLetter(letter)">
+        {{ letter.toUpperCase() }}</button>
     </div>
 
     <div class="game-buttons">

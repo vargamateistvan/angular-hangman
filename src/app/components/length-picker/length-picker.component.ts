@@ -13,6 +13,7 @@ export class LengthPickerComponent implements OnInit {
   constructor(private gameService: GameService) {}
 
   ngOnInit(): void {
+    this.gameService.resetGame();
     this.wordLengths = this.gameService.getWordLengths();
   }
 

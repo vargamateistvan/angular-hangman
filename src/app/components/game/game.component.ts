@@ -8,7 +8,6 @@ import { GameService } from 'src/app/services/game.service';
 })
 export class GameComponent implements OnInit {
   public word: string = '';
-  public wordLetters: string[] = [];
   public wordGuesses: string[] = [];
   public letters: string[] = [
     'a',
@@ -45,16 +44,19 @@ export class GameComponent implements OnInit {
 
   ngOnInit(): void {
     this.word = this.gameService.selectWordByLength();
-    this.wordLetters = this.word?.split('');
-    this.wordGuesses.length = this.wordLetters?.length || 0;
-    this.wordGuesses.fill('');
+    this.wordGuesses = this.gameService.getGuesses();
+    this.guessedLetters = this.gameService.getGuessedLetters();
+    this.missedLetters = this.gameService.getMissesLetters();
   }
 
   public guessLetter(letter: string): void {
-    if (this.guessedLetters.includes(letter) || this.missedLetters === 6)
+    if (
+      this.gameService.getGuessedLetters().includes(letter) ||
+      this.missedLetters === 6
+    )
       return;
 
-    this.guessedLetters.push(letter);
+    this.gameService.updateGuessedLetters(letter);
 
     if (this.word.includes(letter)) {
       const indexes = this.getIndexOfLetter(letter);
@@ -77,7 +79,9 @@ export class GameComponent implements OnInit {
 
   setLetterOnIndex(indexes: number[], letter: string) {
     indexes.forEach((index: number) => {
-      this.wordGuesses[index] = letter;
+      const guesses = this.gameService.getGuesses();
+      guesses[index] = letter;
+      this.gameService.updateGuesses(guesses);
     });
   }
 }
